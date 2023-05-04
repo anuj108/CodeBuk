@@ -15,7 +15,7 @@ import Edit from "./components/Profile/Edit";
 import Friends from "./components/friends/Friends";
 // // import Notify from "./components/alert/Alert"
 import OtherProfile from "./components/otherProfile/OtherProfile";
-import Contest from "./components/Contests/contest";
+import Contest from "./components/Contests/contest.js";
 import Enterdetails from "./components/auth/enterdetails/Enterdetails";
 import Search from "./components/Search/Search";
 import { Navigate } from "react-router-dom";
