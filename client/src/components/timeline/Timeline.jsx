@@ -23,7 +23,7 @@ function Timeline(props) {
     // console.log(bodyformdata);
     // const d=await callCodeforcessubmissions(props.data.codeforcesID);
 
-    const response = await fetch("http://localhost:1337/posts", {
+    const response = await fetch("https://long-blue-fly-cuff.cyclic.app/posts", {
       method: "POST",
       body: bodyformdata,
     });

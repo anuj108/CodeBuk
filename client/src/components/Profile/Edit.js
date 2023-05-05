@@ -45,7 +45,7 @@ const Edit = () => {
 
     console.log(bodyformdata);
 
-    const response = await fetch("http://localhost:1337/user/" + details._id, {
+    const response = await fetch("https://long-blue-fly-cuff.cyclic.app/user/" + details._id, {
       method: "PUT",
       body: bodyformdata,
     });

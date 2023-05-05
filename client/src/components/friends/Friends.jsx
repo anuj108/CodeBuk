@@ -15,7 +15,7 @@ function Friends() {
   const navigate = useNavigate();
   const callFriends = async () => {
     try {
-      const res = await fetch("http://localhost:1337/profile", {
+      const res = await fetch("https://long-blue-fly-cuff.cyclic.app/profile", {
         method: "GET",
         headers: {
           Accept: "application/json",

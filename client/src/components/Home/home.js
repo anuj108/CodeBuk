@@ -16,7 +16,7 @@ const Home = () => {
 
   const callHomePage = async () => {
     try {
-      const res = await fetch("http://localhost:1337/home", {
+      const res = await fetch("https://long-blue-fly-cuff.cyclic.app/home", {
         method: "GET",
         headers: {
           Accept: "application/json",

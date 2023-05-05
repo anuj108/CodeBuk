@@ -2,7 +2,7 @@ const callDetails1 = async (props) => {
   try {
     console.log(props);
     const res = await fetch(
-      `http://localhost:1337/user/${props}`,
+      `https://long-blue-fly-cuff.cyclic.app/user/${props}`,
       {
         method: "GET",
         headers: {
