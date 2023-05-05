@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
 
 app.get("/home", (req, res) => {
   res.cookie("Test", "something");
-});
+}); 
 //deployement
 app.use(express.static(path.join(__dirname,'./client/build')))
 app.get('*',()=>{
