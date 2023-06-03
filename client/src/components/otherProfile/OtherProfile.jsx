@@ -30,7 +30,7 @@ function OtherProfile(props) {
 
     console.log(details._id);
     const response = await fetch(
-      `https://long-blue-fly-cuff.cyclic.app/user/${details._id}/follow`,
+      `https://sore-teal-bighorn-sheep-tam.cyclic.app/user/${details._id}/follow`,
       {
         method: "PUT",
         headers: {
@@ -57,7 +57,7 @@ function OtherProfile(props) {
 
     console.log(details._id);
     const response = await fetch(
-      `https://long-blue-fly-cuff.cyclic.app/user/${details._id}/unfollow`,
+      `https://sore-teal-bighorn-sheep-tam.cyclic.app/user/${details._id}/unfollow`,
       {
         method: "PUT",
         headers: {
@@ -81,7 +81,7 @@ function OtherProfile(props) {
 
   const OtherProfilePage = async () => {
     try {
-      // const res = await fetch("https://long-blue-fly-cuff.cyclic.app/profile", {
+      // const res = await fetch("https://sore-teal-bighorn-sheep-tam.cyclic.app/profile", {
       //   method: "GET",
       //   headers: {
       //     Accept: "application/json",

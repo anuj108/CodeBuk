@@ -18,7 +18,7 @@ function Posts(props) {
       console.log(props.userID);
       await callCodeforcessubmissions(props);
       const res = await fetch(
-        "https://long-blue-fly-cuff.cyclic.app/posts/timeline/all/" + props.userID._id,
+        "https://sore-teal-bighorn-sheep-tam.cyclic.app/posts/timeline/all/" + props.userID._id,
         {
           method: "GET",
           headers: {

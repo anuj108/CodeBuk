@@ -22,7 +22,7 @@ function Login() {
   async function loginUser(event) {
     event.preventDefault();
     console.log("jsfl");
-    const response = await fetch("https://long-blue-fly-cuff.cyclic.app/login", {
+    const response = await fetch("https://sore-teal-bighorn-sheep-tam.cyclic.app/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

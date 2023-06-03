@@ -23,7 +23,7 @@ const Register = () => {
 
   async function registerUser(event) {
     event.preventDefault();
-    const response = await fetch("https://long-blue-fly-cuff.cyclic.app/register", {
+    const response = await fetch("https://sore-teal-bighorn-sheep-tam.cyclic.app/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

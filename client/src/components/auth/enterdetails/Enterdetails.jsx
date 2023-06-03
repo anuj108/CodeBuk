@@ -23,7 +23,7 @@ const Enterdetails = () => {
 
   async function registerUser(event) {
     event.preventDefault();
-    const response = await fetch("https://long-blue-fly-cuff.cyclic.app/enterdetails", {
+    const response = await fetch("https://sore-teal-bighorn-sheep-tam.cyclic.app/enterdetails", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

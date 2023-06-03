@@ -8,7 +8,7 @@ const Logout = () => {
   //promises
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("https://long-blue-fly-cuff.cyclic.app/logout", {
+    fetch("https://sore-teal-bighorn-sheep-tam.cyclic.app/logout", {
       method: "POST",
       headers: {
         Accept: "application/json",

@@ -20,7 +20,7 @@ function Profile(props) {
 
   const callProfilePage = async () => {
     try {
-      const res = await fetch("https://long-blue-fly-cuff.cyclic.app/profile", {
+      const res = await fetch("https://sore-teal-bighorn-sheep-tam.cyclic.app/profile", {
         method: "GET",
         headers: {
           Accept: "application/json",

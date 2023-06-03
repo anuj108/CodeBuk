@@ -23,7 +23,7 @@ const callCodeforcessubmissions = async (props) => {
       if (results.verdict === "OK") {
         console.log(props);
         console.log(results.id);
-        const response = await fetch("https://long-blue-fly-cuff.cyclic.app/posts/codeforces", {
+        const response = await fetch("https://sore-teal-bighorn-sheep-tam.cyclic.app/posts/codeforces", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
