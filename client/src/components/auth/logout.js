@@ -22,7 +22,6 @@ const Logout = () => {
           const error = new Error(res.error);
           throw error;
         } else {
-        
           console.log("yes");
         }
       })
