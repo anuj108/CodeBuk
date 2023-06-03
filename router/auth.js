@@ -536,6 +536,7 @@ router.post("/logout", (req, res) => {
   // res.clearCookie("jwtoken", {
   //   path: "/",domain: "https://gleaming-starburst-39212b.netlify.app/profile"
   // });
+  Cookies.remove('jwtoken')
   res.cookie('jwtoken', 'none', {
     expires: new Date(Date.now() + 5 * 1000),
     httpOnly: true,
