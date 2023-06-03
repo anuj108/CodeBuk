@@ -22,7 +22,7 @@ const Logout = () => {
           const error = new Error(res.error);
           throw error;
         } else {
-          localStorage.removeItem('userInfo')
+        
           console.log("yes");
         }
       })
