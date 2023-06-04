@@ -9,7 +9,7 @@ const Logout = () => {
   const navigate = useNavigate();
   useEffect(() => {
     fetch("https://sore-teal-bighorn-sheep-tam.cyclic.app/logout", {
-      method: "POST",
+      method: "GET",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",

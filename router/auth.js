@@ -534,7 +534,7 @@ router.get("/profile/:id", (req, res) => {
 router.get("/logout", (req, res) => {
   console.log("HELLO FROM logout");
   // res.send("HELLO WORLD FROM SERVER");
-  res.clearCookie("jwtoken", {
+  req.clearCookie("jwtoken", {
     path: "/",domain:"sore-teal-bighorn-sheep-tam.cyclic.app"
   });
   // req.session.destroy();
