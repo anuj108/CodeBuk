@@ -104,7 +104,7 @@ router.post("/login", async (req, res) => {
       console.log(token);
 
       res.cookie("jwtoken", token, {
-        domain:".sore-teal-bighorn-sheep-tam.cyclic.app",
+        domain:"sore-teal-bighorn-sheep-tam.cyclic.app",
         // expires: new Date(Date.now() + 25892000000),
         httpOnly: true,
         sameSite: "none",
@@ -537,7 +537,7 @@ router.get("/logout", (req, res) => {
   res.clearCookie("jwtoken", {
     path: "/",domain:"sore-teal-bighorn-sheep-tam.cyclic.app"
   });
-  req.session.destroy();
+  // req.session.destroy();
   
 //   res.cookie('jwtoken', 'none', {
 //     expires: new Date(Date.now() + 1000),
