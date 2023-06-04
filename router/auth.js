@@ -104,7 +104,7 @@ router.post("/login", async (req, res) => {
       console.log(token);
 
       res.cookie("jwtoken", token, {
-        expires: new Date(Date.now() + 25892000000),
+        // expires: new Date(Date.now() + 25892000000),
         httpOnly: true,
         sameSite: "none",
         secure: true,
@@ -533,14 +533,14 @@ router.get("/profile/:id", (req, res) => {
 router.post("/logout", (req, res) => {
   console.log("HELLO FROM logout");
   // res.send("HELLO WORLD FROM SERVER");
-  // res.clearCookie("jwtoken", {
-  //   path: "/"
-  // });
+  res.clearCookie("jwtoken", {
+    path: "/"
+  });
   
-  res.cookie('jwtoken', 'none', {
-    expires: new Date(Date.now() + 1000),
-    httpOnly: true,
-})
+//   res.cookie('jwtoken', 'none', {
+//     expires: new Date(Date.now() + 1000),
+//     httpOnly: true,
+// })
   res.status(200).send("user logout");
 });
 
