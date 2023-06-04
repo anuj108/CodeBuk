@@ -10,11 +10,11 @@ const Logout = () => {
   useEffect(() => {
     fetch("https://sore-teal-bighorn-sheep-tam.cyclic.app/logout", {
       method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      credentials: "include",
+      // headers: {
+      //   Accept: "application/json",
+      //   "Content-Type": "application/json",
+      // },
+      // credentials: "include",
     })
       .then((res) => {
         // navigate("/login",{replace:true});
