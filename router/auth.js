@@ -531,7 +531,7 @@ router.get("/profile/:id", (req, res) => {
   res.send(req.rootUser);
 });
 
-router.post("/logout", (req, res) => {
+router.get("/logout", (req, res) => {
   console.log("HELLO FROM logout");
   // res.send("HELLO WORLD FROM SERVER");
   res.clearCookie("jwtoken", {
