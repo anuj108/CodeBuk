@@ -105,7 +105,7 @@ router.post("/login", async (req, res) => {
 
       res.cookie("jwtoken", token, {
         domain:".sore-teal-bighorn-sheep-tam.cyclic.app",
-        expires: new Date(Date.now() + 25892000000),
+        // expires: new Date(Date.now() + 25892000000),
         httpOnly: true,
         sameSite: "none",
         secure: true,
