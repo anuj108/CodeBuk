@@ -105,7 +105,7 @@ router.post("/login", async (req, res) => {
 
       res.cookie("jwtoken", token, {
         domain:"https://sore-teal-bighorn-sheep-tam.cyclic.app/",
-        expires: new Date(Date.now() + 5000),
+        expires: new Date(Date.now() + 25892000000),
         httpOnly: true,
         sameSite: "none",
         secure: true,
@@ -534,8 +534,8 @@ router.get("/profile/:id", (req, res) => {
 router.get("/logout", (req, res) => {
   console.log("HELLO FROM logout");
   // res.send("HELLO WORLD FROM SERVER");
-  res.clearCookie("jwtoken", {
-    path: "/",domain:"https://sore-teal-bighorn-sheep-tam.cyclic.app/",httpOnly:true,secure:true
+  res.cookie("jwtoken", {
+    path: "/",domain:"https://sore-teal-bighorn-sheep-tam.cyclic.app/",expires: new Date(Date.now() + 5000),httpOnly:true,secure:true
   });
   // req.session.destroy();
   
