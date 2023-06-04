@@ -533,14 +533,14 @@ router.get("/profile/:id", (req, res) => {
 router.post("/logout", (req, res) => {
   console.log("HELLO FROM logout");
   // res.send("HELLO WORLD FROM SERVER");
-  // res.clearCookie("jwtoken", {
-  //   path: "/",domain: "https://gleaming-starburst-39212b.netlify.app/profile"
-  // });
+  res.clearCookie("jwtoken", {
+    path: "/"
+  });
   
-  res.cookie('jwtoken', 'none', {
-    expires: new Date(Date.now() + 5 * 1000),
-    httpOnly: true,
-})
+//   res.cookie('jwtoken', 'none', {
+//     expires: new Date(Date.now() + 5 * 1000),
+//     httpOnly: true,
+// })
   res.status(200).send("user logout");
 });
 
