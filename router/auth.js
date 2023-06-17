@@ -537,7 +537,7 @@ router.get("/logout", (req, res) => {
   //res.cookie("jwtoken","none", {
   //  path: "/",domain:"https://sore-teal-bighorn-sheep-tam.cyclic.app/",expires: new Date(Date.now() + 5000),httpOnly:true,secure:true
     //}
-    res.clearCookie(jwtoken, path = '/');
+    res.clearCookie('jwtoken');
   ) ;
   // req.session.destroy();
   
