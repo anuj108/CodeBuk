@@ -545,10 +545,13 @@ router.get("/logout", (req, res) => {
 //     expires: new Date(Date.now() + 1000),
 //     httpOnly: true,
 // })
-
-    res.clearCookie("jwtoken", {
-        path: "/"
+    res.cookie('jwt', '', {
+        httpOnly: true,
+        expires: new Date(0),
     });
+    //res.clearCookie("jwtoken", {
+    //    path: "/"
+    //});
   res.status(200).send("user logout");
 });
 
