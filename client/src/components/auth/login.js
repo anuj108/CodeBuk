@@ -22,17 +22,20 @@ function Login() {
   async function loginUser(event) {
     event.preventDefault();
     console.log("jsfl");
-    const response = await fetch("https://sore-teal-bighorn-sheep-tam.cyclic.app/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-      credentials: "include",
-    });
+    const response = await fetch(
+      "https://sore-teal-bighorn-sheep-tam.cyclic.app/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+        credentials: "include",
+      }
+    );
 
     const data = await response.json();
     console.log(data);
@@ -49,53 +52,7 @@ function Login() {
   }
   return (
     <div className="login">
-      {/* {
-        loading?
-        <ClipLoader
-        color="red"
-        loading={loading}
-    
-        size={150}
-        aria-label="Loading Spinner"
-        data-testid="loader"
-      />
-        : */}
-
-      {/* <div className="card">
-        <div className="left">
-          <h1>Hello World.</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cum,
-            alias totam numquam ipsa exercitationem dignissimos, error nam,
-            consequatur.
-          </p>
-          <span>Don't you have an account?</span>
-          <Link to="/register">
-            <button>Register</button>
-          </Link>
-        </div>
-        <div className="right">
-          <h1>Login</h1>
-          <form onSubmit={loginUser}>
-            <input
-              value={email}
-              onChange={(e) => setemail(e.target.value)}
-              type="email"
-              placeholder="Email"
-            />
-            <br />
-            <input
-              value={password}
-              onChange={(e) => setpassword(e.target.value)}
-              type="password"
-              placeholder="Password"
-            />
-            <br />
-            <input type="submit" value="Login" style={{ cursor: "pointer" }} />
-            <br />
-          </form>
-        </div>
-      </div> */}
+      
       <img
         className="wave"
         src="https://raw.githubusercontent.com/sefyudem/Responsive-Login-Form/master/img/wave.png"
@@ -116,7 +73,10 @@ function Login() {
                 {/* <h5>Username</h5> */}
                 <input
                   value={email}
-                  onChange={(e) => setemail(e.target.value)}
+                  onChange={(e) => 
+                    {setemail(e.target.value)}
+                }
+                  
                   type="email"
                   placeholder="Email"
                 />

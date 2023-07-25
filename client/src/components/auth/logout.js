@@ -3,33 +3,41 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./logout.css";
 import { Link } from "react-router-dom";
+import {Cookies} from 'js-cookie'
 
 const Logout = () => {
   //promises
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("https://sore-teal-bighorn-sheep-tam.cyclic.app/logout", {
-      method: "GET",
-      // headers: {
-      //   Accept: "application/json",
-      //   "Content-Type": "application/json",
-      // },
-      // credentials: "include",
-    })
-      .then((res) => {
-        // navigate("/login",{replace:true});
-        if (res.status !== 200) {
-          const error = new Error(res.error);
-          throw error;
-        } else {
-          console.log(res);
-          console.log("yes");
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  });
+    alert("h");
+      document.cookie = 'jwtoken=; Max-Age=0;secure';;
+    
+}, []);
+  // useEffect(() => {
+  //   Cookies.remove("jwtoken");
+    // fetch("https://sore-teal-bighorn-sheep-tam.cyclic.app/logout", {
+    //   method: "GET",
+    //   // headers: {
+    //   //   Accept: "application/json",
+    //   //   "Content-Type": "application/json",
+    //   // },
+    //   // credentials: "include",
+    // })
+    //   .then((res) => {
+    //     // navigate("/login",{replace:true});
+    //     if (res.status !== 200) {
+    //       const error = new Error(res.error);
+    //       throw error;
+    //     } else {
+    //       console.log(res);
+    //       console.log("yes");
+    //     }
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+  // });
+  
   return (
     <div className="logout">
       <div className="content">

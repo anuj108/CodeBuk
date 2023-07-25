@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 import { useState } from "react";
-// import ReactDOM from 'react-dom'
+
 import { Route } from "react-router-dom";
 import Register from "./components/auth/register";
 import Login from "./components/auth/login";
@@ -13,7 +13,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
 import Edit from "./components/Profile/Edit";
 import Friends from "./components/friends/Friends";
-// // import Notify from "./components/alert/Alert"
+
 import OtherProfile from "./components/otherProfile/OtherProfile";
 import Contest from "./components/Contests/contest.js";
 import Enterdetails from "./components/auth/enterdetails/Enterdetails";

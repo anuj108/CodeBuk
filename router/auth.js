@@ -40,7 +40,7 @@ router.post("/register", async (req, res) => {
   if (
     (!name || !email || !password || !address || !codechefID, !codeforcesID)
   ) {
-    return res.status(422).json({ error: "FILL KROOOOO" });
+    return res.status(422).json({ error: "Please fill the details" });
   }
   try {
     const userExist = await User.findOne({ email: email });
@@ -184,7 +184,7 @@ router.get("/profile", authenticate, async (req, res) => {
         const responseThree = responses[2];
 
         const responseFour = responses[3];
-        //  console.log(response);
+         console.log(responseOne);
         // console.log(response.data);
         const $ = cheerio.load(responseOne.data);
         let so = $(".content");
