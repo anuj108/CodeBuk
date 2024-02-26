@@ -11,20 +11,20 @@ function Contest() {
   const contestpage = async () => {
     try {
       const res = await fetch(
-        "http://kontests.net/api/v1/all",
+        "https://sore-teal-bighorn-sheep-tam.cyclic.app/contest",
         {
           method: "GET",
-          // headers: {
-          //   Accept: "application/json",
-
-          // },
+          headers: {
+            Accept: "application/json",
+            
+          },
           // mode: 'no-cors',
           credentials: "omit",
         }
       );
       const data = await res.json();
-    setDetails(data);
-      console.log(data);
+    setDetails(data.objects);
+      console.log(data.objects);
       console.log(Details[0]);
     } catch (err) {
       console.log(err);
@@ -41,7 +41,7 @@ function Contest() {
       <table>
         <thead>
           <tr>
-            <th>Platform Name</th>
+            <th>Platform </th>
             <th>Contest Name</th>
             <th>Start Time</th>
             <th>End Time</th>
@@ -56,20 +56,21 @@ function Contest() {
             ? myData = [].concat(Details)
             .sort(function(a, b){
               // Convert string dates into `Date` objects
-              const date1 = new Date(a.start_time);
-              const date2 = new Date(b.start_time);
+              const date1 = new Date(a.start);
+              const date2 = new Date(b.start);
               
               return date1 - date2;
-          }).map((item) => (
+          })
+          .map((item) => (
               
-                <tr style={{padding:'20px' ,color:'green'}}>
-                  <td>{item.site}</td>
-                  <td>{item.name}</td>
-                  <td >{item.start_time.substring(0,10) }</td>
-                  <td>{item.end_time.substring(0,10) }</td>
+                (<tr style={{padding:'20px' ,color:'green'}}>
+                  <td><a href="{item.href}">{item.host}</a></td>
+                  <td>{item.event}</td>
+                  <td >{item.start.substring(0,10) }</td>
+                  <td>{item.end.substring(0,10) }</td>
                   {/* <td>{item.duration}</td> */}
-                  
-                </tr>
+                </tr>)
+            
               ))
             :(
               <div class="middle">

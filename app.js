@@ -6,6 +6,7 @@ const dotenv = require("dotenv");
 const cookieparser = require("cookie-parser");
 const postRoute = require("./router/posts");
 const userRoute = require("./router/users");
+const contestRoute = require("./router/contest.js");
 const axios = require("axios");
 const path = require("path");
 
@@ -24,19 +25,20 @@ app.use(cors(corsOptions));
 app.use(require("./router/auth"));
 app.use("/posts", postRoute);
 app.use("/user", userRoute);
+app.get('/contest', contestRoute);
 
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
   res.json("HELLO");
 });
 
-app.get("/home", (req, res) => {
-  res.cookie("Test", "something");
-});
+// app.get("/home", (req, res) => {
+//   res.cookie("Test", "something");
+// });
 //deployement
-app.use(express.static(path.join(__dirname, "./client/build")));
-app.get("*", () => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.use(express.static(path.join(__dirname, "./client/build")));
+// app.get("*", () => {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static("client/build"));
 // }
