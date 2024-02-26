@@ -5,10 +5,10 @@ const router = express.Router();
 
 router.get("/contest", (req, res) => {
   console.log("HELLO FROM CONTEST");
-
+  const apikey = process.env.APIKEY;
   const result = axios
     .get(
-      `https://clist.by:443/api/v4/contest/?username=chan_0912&api_key=6ce47452759ef28b3e833a3f7c17d2a75d4cb952&upcoming=true&start_time__during=10%20days`
+      `https://clist.by:443/api/v4/contest/?username=chan_0912&api_key=${apikey}&upcoming=true&start_time__during=10%20days`
     )
     .then((result) => {
       // console.log(result.data);
